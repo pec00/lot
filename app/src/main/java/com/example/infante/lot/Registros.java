@@ -7,8 +7,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import java.util.Calendar;
+import java.util.Date;
 
 import util.Conexion;
 import util.Utilidades;
@@ -36,17 +41,30 @@ public class Registros extends AppCompatActivity {
     }
 
     private void registrarSorteo(){
+
+        Date fecha = Calendar.getInstance().getTime();
+
+
+
         Conexion conexion = new Conexion(this, "loteria", null, 1);
 
         SQLiteDatabase db = conexion.getReadableDatabase();
 
-        ContentValues valor = new ContentValues();
+        ContentValues valores = new ContentValues();
 
-        valor.put(Utilidades.NOMBRE, primer_premio.getText().toString());
+        valores.put(Utilidades.ID, fecha.toString());
+        valores.put(Utilidades.PRIMERO, primer_premio.getText().toString());
+        valores.put(Utilidades.SEGUNDO, segundo_premio.getText().toString());
+        valores.put(Utilidades.TERCERO, tercer_premio.getText().toString());
 
-        db.insert(Utilidades.NOMBRE_TABLA, Utilidades.NOMBRE, valor);
+        db.insert(Utilidades.NOMBRE_TABLA, Utilidades.ID, valores);
 
         db.close();
+
+        primer_premio.setText("");
+        segundo_premio.setText("");
+        tercer_premio.setText("");
+
 
     }
 

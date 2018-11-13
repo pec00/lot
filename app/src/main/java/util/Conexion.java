@@ -13,7 +13,7 @@ public class Conexion extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(Utilidades.C_TABLA);
+        db.execSQL(Utilidades.CREAR_TABLA);
 
     }
 

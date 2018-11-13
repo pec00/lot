@@ -33,16 +33,21 @@
     </LinearLayout>
 
     <TableLayout
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="@color/gris"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TableRow
-            android:background="@color/colorAccent"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
                 android:text="Premios"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 android:layout_weight="2.0"
                 android:gravity="center|left"
                 android:layout_width="match_parent"
@@ -50,6 +55,7 @@
             <EditText
                 android:id="@+id/txt_primero"
                 android:hint="00"
+                android:inputType="numberSigned"
                 android:gravity="right"
                 android:layout_weight="1.0"
                 android:layout_width="match_parent"
@@ -57,6 +63,7 @@
             <EditText
                 android:id="@+id/txt_segundo"
                 android:hint="00"
+                android:inputType="numberSigned"
                 android:gravity="right"
                 android:layout_weight="1.0"
                 android:layout_width="match_parent"
@@ -64,6 +71,7 @@
             <EditText
                 android:id="@+id/txt_tercero"
                 android:hint="00"
+                android:inputType="numberSigned"
                 android:gravity="right"
                 android:layout_weight="1.0"
                 android:layout_width="match_parent"
@@ -72,7 +80,7 @@
     </TableLayout>
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <TableRow>
             <Button
                 android:id="@+id/btn_cancelar"
@@ -90,6 +98,8 @@
                 android:text="guardar" />
         </TableRow>
     </TableLayout>
+
+
 
 
 
