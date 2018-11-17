@@ -1,11 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registros">
+    tools:context=".Contenido">
 
+    <!--esto es para la cabecera-->
     <LinearLayout
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
@@ -33,6 +35,24 @@
         </TableLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:text="hoadfdsfdsfsfdsgfdsgdsgfds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
 
     <TableLayout
         android:paddingLeft="12dp"
@@ -105,26 +125,7 @@
                 android:layout_height="match_parent" />
         </TableRow>
     </TableLayout>
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TableRow>
-            <Button
-                android:id="@+id/btn_cancelar"
-                android:text="Cancelar"
-                android:layout_weight="1.0"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
 
-            <Button
-                android:id="@+id/btn_guardar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                android:onClick="onClick"
-                android:text="guardar" />
-        </TableRow>
-    </TableLayout>
 
 
 
@@ -133,14 +134,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <include
             layout="@layout/menu_layout"/>
 
     </LinearLayout>
-
-
-
-
 
 
 
